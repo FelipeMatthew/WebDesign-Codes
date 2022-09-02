@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+       body{
+           font-family: sans-serif;
+       } 
+       table{
+           /* Deixa as bordas unidas sem separação */
+           border-collapse: collapse;
+           width: 80%;
+           margin: auto;
+           background-color: bisque;
+           padding: 20px;
+       }
+
+       td{
+           border: 2px solid black;
+           text-align: center;
+       }
+       th{
+           background-color: rgb(0, 0, 0);
+           border: 2px solid rgb(255, 255, 255);
+           color: white;
+       }
+      caption{
+          color: aqua;
+          border: 5px solid paleturquoise;
+      }
+
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Preços de cursos</caption>
+
+        <thead>
+            <tr>
+                <th>Área</th>
+                <th>Cursos</th>
+                <th>Investimento</th>
+            </tr>
+        </thead>
+
+
+        <tfoot>
+            <tr>
+                <!-- Colocou que vale como 3 linhas -->
+                <td colspan="3">Valores sujeitos a alterações sem prévio aviso</td>
+            </tr>
+        </tfoot>
+
+
+        <tbody>
+            <div>
+            <tr>
+                <td rowspan="3">Design</td>
+                <td>Indesign</td>
+                <td>$5.000,00</td>
+            </tr>
+
+            <tr>
+                
+                <td>Photoshop</td>
+                <td>$5.000,00</td>
+            </tr>
+
+            <tr>
+                
+                <td>Ilustrator</td>
+                <td>$5.000,00</td>
+            </tr>
+            </div>
+                
+
+            <div>
+                <tr>
+                    <td rowspan="4">Development</td>
+                    <td>HTML</td>
+                    <td>$5.000,00</td>
+                </tr>
+                
+                <tr>
+                    
+                    <td>CSS</td>
+                    <td>$5.000,00</td>
+                </tr>
+    
+                <tr>
+                    
+                    <td>Javascript</td>
+                    <td>$5.000,00</td>
+                </tr>
+
+                <tr>
+                   
+                    <td>PHP</td>
+                    <td>$5.000,00</td>
+                </tr>
+            </div>
+        </tbody>
+    </table>
+
+
+</body>
+</html>
