@@ -1,0 +1,137 @@
+body{
+    font-family: tahoma, arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#principal{
+    width: 1024px;
+    margin: 25px auto;
+}
+.h-top{
+    height: 50px;
+    background-color: #162028;
+    position: relative;
+}
+.logotipo{
+    margin: 10px 0 0 150px;
+}
+.h-nav{
+    position: absolute;
+    top:0;
+    right: 100px;
+}
+.h-nav li{
+    list-style-type: none; 
+    display: inline-block;
+    padding-left: 40px;
+    text-transform: uppercase;   
+    
+}
+.h-nav a{
+    color: #425564;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 3px;
+
+    /* Função nova de transformar o hover */
+    transition: color 0.5s linear;
+    /*  1-o que voce quer mudar = cor
+        2- o tempo da ação 
+        3- a velocidade */
+}
+.h-nav a:hover{
+    color: white;
+
+}
+.txt{
+    margin: 50px 0px 100px 0px;
+    line-height: 2;
+}
+.txt h1{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 32px;
+}
+.txt p{
+    text-align: center;
+    color:  rgba(0, 0, 0, 0.7);
+    
+}
+
+
+.card{
+    width: 32%;
+    display: inline-block;
+    float: left;
+    margin-left: 1%;
+    text-align: center;
+    overflow: auto;
+    margin-bottom: 80px;
+}
+.card h2{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+}
+.card p{
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.Txt-bgimg{
+    background-image: url(./img/bg_detalhe.png);
+    padding: 50px 100px 100px 100px;
+    color: white;
+    overflow: auto;
+    background-color: #003d52;
+    background-repeat: no-repeat;
+    /* Usado para não repetir a imagem */
+    background-position: right bottom;
+    
+}
+.Txt-bgimg h2{
+    text-transform: uppercase;
+    font-size: 38px;
+    letter-spacing: 2px;
+    font-weight: normal ;
+}
+.Txt-bgimg p{
+    line-height: 1.5;
+    width: 65%;
+}
+#adress{
+    margin: 50px 0;
+    text-align: center;
+    color: #003d52;
+    text-transform: uppercase;
+    font-style:normal;
+    font-size: 26px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+#map{
+   
+    width: 100%;
+    height: 450px;
+    margin-bottom: 30px;
+    display: inline-block;
+    text-align: center;
+}
+#map iframe{
+    width: 100%;
+}
+footer{
+    background-color: #162028;
+    padding: 25px;
+    /* Centralizou tudo na parte interna*/
+    text-align: center; 
+    color: #6f8597;
+    letter-spacing: 3px;
+    font-size: 16px;
+}
+
+
+
+
