@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Vai trabalhar dentro da lista da lista */
+        li ul{
+            height: 0;
+            overflow: hidden;
+            transition: height 1s;
+        }
+        li:hover{
+            background-color: blueviolet;
+        }
+        /* Quando for acionada ela vai voltar a ser bloco ao qual tinha sido desativada */
+        li:hover ul{
+            height: 60px;
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <!-- Lista aninhada  -->
+    <ul>
+        <li>1</li>
+        <!-- Atenção a lista temq fechar dentro dela msm -->
+        <li>2
+            <ul>
+                <li>2.1</li>
+                <li>2.2</li>
+                <li>2.3</li>
+            </ul>
+        </li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        
+    </ul>
+    
+
+    <!-- Lista de definição -->
+
+    <br>
+
+    <dl>
+        <dt>Css</dt>
+        <dd>é uma linguagem de marcação</dd>
+        <hr>
+        <dt>www</dt>
+        <dt>Internet</dt>
+        <dd>Rede de computadores interligadas</dd>
+        <hr>
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação</dd>
+        <dd>Opera junto com o Css</dd>
+    </dl>
+</body>
+</html>
