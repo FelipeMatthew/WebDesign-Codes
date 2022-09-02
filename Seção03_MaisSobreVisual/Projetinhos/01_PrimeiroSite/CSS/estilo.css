@@ -1,0 +1,165 @@
+/* Parte destinada para todo o site */
+body{ 
+    font-family: Arial, sans-serif;
+    /* Fonte que o site inteiro vai usar */
+    background-color: #ccc;
+    /* Cor de fundo meio acizentada no site todo */
+}
+/* Parte do primeiro header em que está a imagem principal e texto principal, tudo do 
+header 1 */
+.hd1{
+    background-image: url(../imagens/bg-4.jpg);
+    /* Vai adicionar uma foto somente na parte do primeiro header */
+    height: 500px;
+    /* Altura da imagem em relação ao site */
+    margin: 0;
+    /* distanciamento da parte externa 0 para ocupar o site todo sem bordas */
+    background-position: right center;
+    /* Posição da imagem, direita e centralizada */
+    background-size: cover;
+    /* Tamanho cover é que mostra a imagem inteira */
+    border-top: 5px solid  transparent;
+    /* Vai trazer imagem pracima e unica distancia 
+    vai ser entre a borda e o header */
+}
+/* Entrando na parte do canto superior direito trabalhando nas listas */
+.hd1 nav ul{
+    text-align: right;
+    /* Vai jogar todo os 3 textos lá para direita */
+    margin: 15px 20px 0 0;
+    /* Margem para não deixar colado no topo direito */
+
+}
+/* Parte da lista em si  */
+.hd1 nav li{
+    display: inline-block;
+    /* Vai colocar como linha e bloco ai mesmo tempo, assim deixando as 3 li na mesma linha */
+    list-style: none;
+    /* Vai tirar as bolinhas que parecerão listas */
+    border: solid white;
+    /* Borda solida e de coloração branca */
+    margin-left: 10px;
+    /* Vai colocar uma margem na esquerda de 10px */
+}
+/* Parte das fontes e linkes  */
+.hd1 nav a{
+    
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Cor de fundo ao qual adicionado rgba
+    1-RED / 2-GREEN/ 3-BLUE/ 4-ALPHA
+    4- Alpha seria a transparencia de cor do 0 ao 1 */
+    display: inline-block;
+    /* Quebra de texto deixando bloco e linha */
+    padding: 10px;
+    /* movimentação interna */
+    color: white;
+    /* Cor branca da fonte */
+    text-decoration: none;
+    /* tira qualquer decoração do texto, que seria o sublinhado */
+    text-transform: uppercase;
+    /* Deixa todos os textos em maiusculo */
+    font-size: 10px;
+    /* Tamanho da fonte de 10px */
+    letter-spacing: 2px;
+    /* Espaçamentos entre as letras de 2px */
+}
+/* Parte das fontes e linkes porem quando voce passa o mouse por cima  */
+.hd1 nav a:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    /* É quando voce passa o mouse encima, deixando mais escurinho */
+}
+/* Parte dos textos que ficarão centralizados no header 1 */
+.content{
+    /* Textos que vão ficar centralizado da imagem */
+    text-align: center;
+    /* Os textos do .content vão ficar no centro do header */
+    color: white;
+    /* Cor da letra */
+    margin-top: 150px;
+    /* Relação interna do texto, da parte superior se afastou 150 px */
+}
+/* Titulo principal do header 1 */
+.content h1{
+    /* Parte do titulo principal do header */
+    text-transform: uppercase;
+    /* Vai transformar todo o texto em maiusculo */
+    font-size: 45px;
+    /* Tamanho da fonte */
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    /* Sombra das letras ao qual:
+    1- trabalha eixo X
+    2- trabalha eixo Y
+    3-trabalha na ofuscagem das sombras
+    4- cor do sombreado */
+}
+/* Paarte que vai fazer a frase pequena do header */
+.content p{
+    background-color: rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    padding: 15px;
+    border-bottom: 4px solid white;
+}
+/* Parte principal de conteudo ao qual tem imagens e os parágrafos */
+main{
+    /* Parte principal do site abaixio do header */
+    width: 80%;
+    margin: auto;
+    /* Serve para centralizar o main */
+}
+/* Parte das 3 imagens e abaixo parte do parágrafo */
+.section{
+    background-color: white;
+    /* fundo dessa parte com cor branca */
+    padding: 15px;
+    /* movimenta a parte interna */
+    margin-top: 15px;
+    /* movimenta a parte externa */
+    overflow: auto;
+}
+/* Parte do "Parágrafo" header do main */
+.section header{
+    /* parte do titulo do texto principal acima de dois parágrafos  */
+    text-indent: 15px;
+    /* Definido o tamanho e distanciamento das margens */
+}
+/* é a div que envolve a imagem e o texto abaixo da imagem */
+.card{
+    width: 32%;
+    display: inline-block;
+    float: left;
+    margin-right: 1%;
+}
+
+.card img{
+    width: 100%;
+}
+/* é o parágrafo que esta abaixo da imagem */
+.letra{
+    text-transform: uppercase;
+    /* Tudo maiusculo */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Cor de fundo */
+    color: white;
+    /* Cor branca */
+    letter-spacing: 1.7px;
+    /* Espaçamento entre as letras */
+    padding: 18px 10px;
+    /* Movimentação da parte interna deixando igual ao modelo  */
+    margin-top:0%;
+    /* Parte externa deixando mais proxima ao texto  */
+    display: block;
+}
+/* Parte do pé do site */
+footer{
+    /* Parte debaixo do site onde fica o copyright */
+    text-align: center;
+    /* Texto ficará centralizado nessa parte */
+    background-color:rgb(51, 49, 49) ;
+    /* Cor do fundo dessa parte */
+    padding: 7px;
+    /* movimentação da parte interna */
+    margin-top: 10px;
+    /* movimentação externa da parte superior  */
+    color: white;
+    /* Cor da fonte do texto */
+}
