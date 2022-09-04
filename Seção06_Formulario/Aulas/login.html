@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .form{
+            width: 250px;
+            margin: 50px auto 0;
+            font-family: sans-serif;
+
+        }
+        .form label{
+            margin-top: 15px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form fieldset{
+            background-color: #ccc;
+
+        }
+        .form legend{
+            border: solid black 2px;
+            background-color: rgb(37, 131, 255);
+            padding: 15px;
+        }
+
+        #user, #pass, .btn{
+            display: block;
+            width: 90%;
+            box-sizing: border-box;
+            padding: 15px;
+            border: none;
+        }
+        #user:focus, #pass:focus{
+            background-color: rgb(190, 192, 196) ;
+
+        }
+        .btn{
+            margin-top: 10px;
+            color: white;
+            background-color: rgb(37, 131, 255);
+        }
+
+    </style>
+</head>
+
+
+<body>
+   <h1>Exemplo de formulário</h1>
+   
+   <form action="#" method="post" class="form" >
+       <fieldset>
+            <legend>Login</legend>
+
+            <label for="user">Usuário</label>
+            <input type="text" id="user" name="#" autofocus>
+
+            <label for="pass">Senha</label>
+            <input type="password" id="pass" name="#">
+
+            <input type="submit" value="Clique aqui" class="btn">
+       </fieldset>
+   </form>
+</body>
+</html>

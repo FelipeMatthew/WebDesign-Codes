@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        fieldset{
+            width: 80%;
+            margin: auto;
+        }
+        input{
+            margin: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+   <h1>Exemplo de formulário</h1>
+   
+   <form action="#" method="post" class="form" >
+       <fieldset>
+            <legend>Todos os tipos de input</legend>
+
+
+            <label for="#">E-mail</label>
+            <input type="email" name="#" placeholder="Insira seu e-mail">
+
+            <br>
+            <label for="#">Numero</label>
+            <input type="number" min="1" max="20">
+
+            <br>
+            <label for="#">Data</label>
+            <input type="date" min="2018-01-01" max="2022-12-31">
+
+            <br>
+            <p>Seleção de sexo</p>
+            
+            <label>
+                <input type="radio" name="sexo" value="M">
+                Macho
+            </label>
+
+            <label>
+                <input type="radio" name="sexo" value="F">
+                Femea
+            </label>
+
+            <label>
+                <input type="radio" name="sexo" value="O">
+                Outro
+            </label>
+
+            <br>
+            <br>
+            <label>Selecionar algo</label>
+            <select name="estados" id="estados">
+
+                <option value="0">Selecione</option>
+                <option value="sp">São Paulo</option>
+                <option value="rj">Rio de Janeiro</option>
+                <option value="bh">Bahia</option>
+                <option value="mg">Minas Gerais</option>
+
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Outros tipos de dados </legend>
+
+            <label>
+            <input type="checkbox" name="html" value="html">HTML
+            </label>
+            <br>
+            <label>
+            <input type="checkbox" name="css" value="css">CSS
+            </label>
+            <br>
+            <label>
+            <input type="checkbox" name="Javascript" value="js">JavaScript
+            </label>
+
+
+        </fieldset>
+
+            <fieldset>
+                <legend>Text area</legend>
+                <textarea name="msg" cols="50" rows="10" style="resize: none;" readonly>Aqui entra o texto que fica dentro 
+                </textarea>
+                <label ><input type="checkbox">Li e aceito termos de contrato</label>
+                <input type="submit" value="Aceitar" style="background-color:rgb(37, 131, 255); color:white;">
+            </fieldset>
+
+            
+            <br>
+            <input type="submit" value="Submit">
+            <input type="button" value="Button">
+            <input type="reset" value="Reset">
+
+
+       
+   </form>
+</body>
+</html>
