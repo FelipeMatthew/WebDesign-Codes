@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        img[src="./img/icon.png"]{
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            margin-right: 5px;
+        }
+        img[src="./img/pdf.png"]{
+            width: 15px;
+            height: 15px;
+        }
+
+        .chk{
+            display: inline-block;
+            border-radius: 5px;
+            border: 2px solid #BBB;
+            background-color: #ddd;
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+        }
+        label{
+            height: 15px;
+            display: inline-block;
+        }
+
+        /* Deixando o botão "Invisivel"*/
+
+        input[type="checkbox"]{
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            visibility: hidden;
+            display: inline-block;
+            margin: 0;
+        }
+        input[type="checkbox"] + label .chk{
+            border-radius: 5px;
+        }
+
+        input[type="checkbox"]:checked + label .chk{
+            background-color: #555;
+            position: relative;
+        }
+
+
+        input[type="checkbox"]:checked + label .chk:before{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0px;
+            bottom:4px;
+            left: 4px;
+            right: 4px;
+            border: 2px solid white;
+            transform: rotate(45deg);
+            border-top-color:transparent ;
+            border-left-color:transparent ;
+            box-sizing: border-box;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>estrutura básica</h1>
+    
+    <a href="http://serfrontend.com" target="_blank"><img src="./img/icon.png" alt=""> Link externo</a>
+    <br>
+    <a href="qq.pdf"><img src="./img/pdf.png" alt=""> Download pdf</a>
+
+    <hr>
+    <input type="checkbox" name="chk" id="chk">
+    <label for="chk"><span class="chk"></span> Li e aceito o contrato</label>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        input[type="checkbox"]{
+            width: 50px;
+            height: 50px;
+        }
+        input[type="checkbox"]:checked{
+            width: 10px;
+            height: 10px;
+        }
+
+        button:disabled{
+            background-color: aqua
+        }
+        p{
+            color: rgb(236, 127, 255);
+        }
+        p:empty::before{
+            content: "Paragrafo vazio ai n da po";
+        }
+        input[type="text"]:focus{
+            background-color: #ccc;
+        }
+        a:focus, a:hover{
+            background-color: red   ;
+        }
+        input[placeholder]::placeholder{
+            background-color: aqua;
+            color: blueviolet;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <label><input type="checkbox" value="sim" name="" id="">Aceito o contato</label>
+
+    <button>On</button>
+    <button disabled>Off</button>
+
+    <p>Paragrafo1</p>
+    <p></p>
+    <p></p>
+
+    <input type="text">
+
+    <ul>
+        <li>
+            <a href="#">Link Falso</a>  
+        </li>
+    </ul>
+
+    <input type="text" placeholder="Valor do placeholder">
+
+</body>
+</html>
