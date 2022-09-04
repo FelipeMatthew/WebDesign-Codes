@@ -1,0 +1,76 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+        
+        <style>
+            .gridContainer{
+                width: 90%;
+                background: #ccc;
+                margin: 30px auto;
+            }
+
+            .gridItem{
+                background-color: orange;
+                padding: 15px;
+                font-family: sans-serif;
+            }
+
+            /* Grid */
+            .gridContainer{
+                display: grid;
+                grid-template-columns:[col-1-start] 1fr [col-1-end col-2-start] 1fr [col-2-end col-3-start] 1fr [col-3-end];
+                grid-template-rows: [header-start] 100px [header-end nav-start] 50px [nav-end main-start] 1fr [main-end footer-start] 50px [footer-end];
+                grid-gap: 20px;
+            }
+            .header{
+                grid-column: col-1-start / col-3-end ;
+                /* grid-row: header-start / header-end; */
+                grid-row: header ;
+            }
+            .nav{
+                grid-column: col-1-start / col-2-end;
+                /* grid-row: nav-start / nav-end; */
+                grid-row: nav;
+            }
+            .aside{
+                grid-column: col-3-start / col-3-end;
+                grid-row: nav-start / footer-end;
+            }
+            .main{
+                min-height: 200px;
+                grid-column: col-1-start / col-2-end;
+                /* grid-row: main-start / main-end; */
+                grid-row: main;
+            }
+            .footer{
+                grid-column: col-1-start / col-3-end; 
+                /* grid-row: footer-start / footer-end; */
+                grid-row: footer;
+                background-color: aqua;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h2>Grid Layout</h2>
+        
+        
+        <div class="gridContainer">
+            <header class="header gridItem">header</header>
+            <nav class="nav gridItem">nav</nav>
+            <aside class="aside gridItem">aside</aside>
+            <main class="main gridItem">
+                main
+            </main>
+            <footer class="footer gridItem">footer</footer>
+        </div>
+        
+        
+    </body>
+</html>

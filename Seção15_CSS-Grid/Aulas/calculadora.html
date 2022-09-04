@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            
+            width: 200px;
+            padding: 20px;
+            border-radius: 10px;
+            background-image: linear-gradient(#b7b7b7, #9c9c9c);
+            box-shadow: 0 0 10px rgba(0 ,0 ,0, .8);
+            margin: 15px auto;   
+            
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 5px;
+            grid-template-rows: auto repeat(5, 40px);
+        }
+        button{
+            padding: .25em;
+
+        }
+        .resultado{
+            padding: 10px;
+            font-size: 1.4em;
+            text-align: right ;
+            background-image: linear-gradient(#c5c5c5, #e0e0e0);
+            box-shadow: inset 3px 2px 0 white;
+            margin-bottom: 15px;
+
+            grid-column: 1 / -1;
+           
+        }
+        .mais{
+            grid-column: 4 / -1;
+            grid-row: 5 / -1;
+
+            background-color: #bbb;
+            border: none;
+            box-shadow: inset 2px 2px 0 white;
+
+        }
+        .zero{
+            grid-column: 1 / 3;
+            grid-row: 6/ -1;
+
+            background-color: #bbb;
+
+            border: none;
+            box-shadow: inset 2px 2px 0 white;
+          
+        }
+    
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="resultado">0</div>
+        <button>AC</button>
+        <button>%</button>
+        <button>X</button>
+        <button>/</button>
+        <button>7</button>
+        <button>8</button>
+        <button class="mais">+</button>
+        <button>9</button>
+        <button class="zero">0</button>
+        <button>-</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>=</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>,</button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+        
+        <style>
+            .gridContainer{
+                width: 90%;
+                background: #ccc;
+                margin: 30px auto;
+            }
+
+            .gridItem{
+                background-color: orange;
+                padding: 15px;
+                font-family: sans-serif;
+            }
+
+            /* Grid */
+            .gridContainer{
+                display: grid;
+                grid-template-columns: repeat(3,1fr) ;
+                grid-template-rows: 100px 50px 1fr 50px ;
+                grid-gap: 20px;
+
+                grid-template-areas:
+                "header header header"
+                "nav    nav    aside"
+                "main   main   aside"
+                "footer footer aside"
+                ;
+            }
+            .header{
+                grid-area: header;
+            }
+            .nav{
+                grid-area: nav;
+            }
+            .aside{
+                grid-area: aside;
+            }
+            .main{            
+                grid-area: main;
+                height: 200px;
+            }
+            .footer{
+                grid-area: footer;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h2>Grid Layout</h2>
+        
+        
+        <div class="gridContainer">
+            <header class="header gridItem">header</header>
+            <nav class="nav gridItem">nav</nav>
+            <aside class="aside gridItem">aside</aside>
+            <main class="main gridItem">
+                main
+            </main>
+            <footer class="footer gridItem">footer</footer>
+        </div>
+        
+        
+    </body>
+</html>
