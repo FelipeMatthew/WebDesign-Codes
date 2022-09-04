@@ -24,6 +24,6 @@ Projeto realizado com o objetivo de desenvolver conhecimentos de HTML5, CSS3, Ja
 
 Esse projeto foi desenvolvido acompanhando as aulas do professor <a href="https://www.udemy.com/share/101zbq3@OVXqepBO-VcshLYZRQm6ZwMjYgdhX9EnOSkXFHAANnTNJRzeOWx8HL6_NjhBaY4PCg==/">Daniel Morales</a>, na plataforma UDEMY
 
-## Suporte ou Contato
+## Suporte e Contato
 
-[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://github.com/FelipeMatthew)
+[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/felipe-matthew-8312b421b/)
