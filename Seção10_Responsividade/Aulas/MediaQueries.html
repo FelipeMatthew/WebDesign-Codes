@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: #bbb;
+            font-size: 16px;
+        }
+        .teste{
+            background-color: red;
+            width: 95%;
+            height: 50px;
+        }
+
+        /* Similar a uma varial, quando altura min for 400px faça isso */
+        @media screen and (min-width: 600px) {
+            body{
+                background-color: aqua;
+            }        
+            .container div{
+                margin: 10px;
+                width: calc(50% - 20px) ;
+                float: left;
+                
+            }    
+        }
+        .container{
+            background-color: orange;
+            padding: 15px;
+            font-size: 24px;
+        }
+        .container div{
+            background-color: #ccc;
+            margin-bottom: 15px;
+            height: 150px;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de midia queries</h1>
+
+    <p>paragrafo qualquer </p>
+
+    <div class="container clearfix">
+        
+        <div>div1</div>
+        <div>div2</div>
+        
+
+    </div>
+    <div class="teste">teste</div>
+</body>
+</html>

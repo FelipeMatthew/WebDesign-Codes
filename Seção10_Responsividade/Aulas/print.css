@@ -1,0 +1,10 @@
+body{
+    font-family: serif;
+    color: aqua ;
+    font-size: 15px;
+    background-color: red;
+}
+a::before{
+       /* content: " ( Link ) "; */
+       content: " ( " attr(href) ")";
+}
