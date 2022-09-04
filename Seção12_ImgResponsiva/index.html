@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img responsiva</title>
+</head>
+
+<body>
+    <h1>Imagens responsivas</h1>
+    
+    <picture>
+        <source media="(min-width: 480px)" sizes="50vw" srcset="img/1280.jpg 
+        1280w, img/960.jpg 960w, img/480.jpg 480w">  
+
+        <source sizes="100vw" srcset="img/822_mob.jpg 822w, img/640_mob.jpg 640w, img/320_mob.jpg 320w">
+        <img src="./img/1280.jpg" alt="ImgAlternativa">
+    </picture>
+</body>
+</html>
