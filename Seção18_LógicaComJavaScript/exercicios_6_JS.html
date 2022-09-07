@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>JavaScript</h1>
+
+    <script>
+        alert("Jogador um VS Jogador dois");
+
+        var n1 = parseInt(prompt("Jogador um - Digite um numero"));
+        var n2 = parseInt(prompt("Jogador dois - Digite um numero"));
+
+        if(n1 == n2){
+            alert("Voces empataram,  tente novamente");
+        }
+        else{
+            alert("Bom agora vamos sortear, ou 0 ou 1");
+            var sorteio = parseInt(Math.random() * 2);
+            alert("O numero sorteado foi: " + sorteio);
+
+            if(sorteio == 0){
+                if(n1 < n2){
+                    alert("Parabens Jogador um venceu!!!!!");
+                }else{
+                    alert("Parabens Jogador dois venceu!!!!!");
+                }
+            }
+            else{
+                if(n1> n2){
+                    alert("Parabens Jogador um venceu!!!!!");
+                }else{
+                    alert("Parabens Jogador dois venceu!!!!!");
+                }
+            }
+        }
+
+    </script>
+
+</body>
+</html>
