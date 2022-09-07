@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @keyframes slide{
+            0%, 22%, 100%{
+                transform: translateY(0vh);
+            }
+            
+            25% , 47%{
+                transform: translateY(-50vh);
+            }
+            50% ,72%{
+                transform: translateY(-100vh);
+            }
+            
+            75% , 97%{
+                transform: translateY(-150vh);
+            }
+           
+
+        } 
+        
+
+        body{
+            font-family: sans-serif;
+            color: white;
+            background-color: #222;
+            margin: 0;
+        }
+        #slide-externo{
+            width: 80vw;
+            height: 50vh;
+            border: 10px solid white;
+            box-shadow: 0 0 10px black;
+            margin-left: 10vw;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        #slide-interno{
+            width: 100%;
+            animation: slide 15s infinite cubic-bezier(.53,-1.01,.57,1.94);
+            
+        }
+        #slide-interno img{
+            display: block;
+            height: 50vh;
+            width: 100%;
+            
+            
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+        <h1>Animation slide show</h1>
+
+        <div id="slide-externo">
+            <div id="slide-interno">
+                <img src="./slide1.jpg" alt="">
+                <img src="./slide2.jpg" alt="">
+                <img src="./slide3.jpg" alt="">
+                <img src="./slide4.jpg" alt="">
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        @keyframes anda{
+            0%{
+                transform: translateX(0);
+                background-color: blueviolet;
+            }
+            25%{
+                transform: translateX(150px);
+            }
+           50%{
+                transform: translateX(0);
+           }
+            100%{
+                transform: translateX(300px);
+                background-color: orange;
+            }
+        }
+
+        #anima-time div{
+            width: 80px;
+            height: 50px;
+            border: solid 2px orange;
+            margin-bottom: 20px;
+        }
+
+        #anima-time div:nth-child(1){
+
+            /* animation: anda 2s ease-in-out; */
+
+            animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+        }
+        #anima-time div:nth-child(2){
+            /* animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 5;
+            animation-direction: alternate; */
+            
+
+             animation: anda 2s ease-in-out 5 alternate; 
+        }
+        #anima-time div:nth-child(3){
+            /* animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: .2s;
+            animation-iteration-count: 5;
+            animation-direction: alternate; */
+            
+
+            animation: anda 2s ease-in-out .2s 5 alternate;
+            
+        }
+        #anima-time div:nth-child(4){
+
+            /* background-color: aqua;
+            animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: .2s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+            animation-fill-mode: backwards;  */
+            
+
+             animation: anda 2s ease-in-out .3s 5 alternate backwards;
+            
+        }
+        #anima-time div:nth-child(5){
+
+            background-color: aqua;
+            animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: .2s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+            animation-fill-mode: backwards; 
+            animation-play-state: running;
+
+
+            animation: anda 2s ease-in-out .2s 5 alternate backwards;
+
+        }
+        #anima-time div:nth-child(5):hover{
+            animation-play-state: paused;
+        }
+        
+
+    </style>
+</head>
+<body>
+    
+    <h2>Animation</h2>
+    <p><code>Animation: name  duration timing-function delay interation-count direction fill-mode play-state</code></p>
+    <div id="anima-time">
+
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+
+    </div>
+</body>
+</html>
