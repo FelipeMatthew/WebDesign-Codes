@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    
+    <h1>Potenciação de numeros do 1 até o 20</h1>
+
+    <button onclick="criar()">Criar potencia</button>
+    <button onclick="limpar()">Limpar potencia</button>
+
+    <div id="saida"></div>  
+
+    <script>
+
+        var mensagem = '';
+        var saida = document.querySelector("#saida");
+        
+        function criar(){
+
+            var num = parseInt(prompt("Por favor me informe o numero de interesse"));
+            var i = 1
+            limpar();
+
+            while(i<= 20){
+
+                mensagem += num + ' ^ ' + i + ' = ' + (Math.pow(num, i)) + '<br>';
+                i++;
+            }
+
+            saida.innerHTML = mensagem;
+        }
+
+        function limpar(){
+
+            mensagem = '';
+            saida.innerHTML = mensagem;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button{
+            padding: 10px;
+            background-color: rgb(88, 190, 156);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            height: 30px;
+            width: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <h1>Função de calculdora</h1>
+
+    <button onclick="somar()">+</button>
+    <button onclick="subitrair()">-</button>
+    <button onclick="multiplicar()">x</button>
+    <button onclick="dividir()">/</button>
+    <button onclick="limpar()">C</button>
+    <button onclick="novonum()">N</button>
+
+    <div id="output"></div>
+
+
+    <script>
+        
+        var n1= parseFloat(prompt("digite um numero:"));
+        var output = document.querySelector("#output");
+
+        escreve()
+        
+        function escreve(){
+
+            output.innerHTML = n1;
+
+        }
+
+        function somar(){
+
+            var n2 = parseFloat(prompt("digite mais um numero:"));
+            n1 = n1 + n2;
+            escreve();
+        }
+        function subitrair(){
+
+            var n2 = parseFloat(prompt("digite mais um numero:"));
+            n1 = n1 - n2;
+            escreve();
+        }
+        function multiplicar(){
+
+            var n2 = parseFloat(prompt("digite mais um numero:"));
+            n1 = n1 * n2;
+            escreve();
+        }
+        function dividir(){
+
+            var n2 = parseFloat(prompt("digite mais um numero:"));
+            n1 = n1 / n2;
+            escreve();
+        }
+
+    </script>
+</body>
+</html>

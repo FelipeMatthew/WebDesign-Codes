@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button{
+            padding: 10px;
+            background-color: rgb(88, 190, 156);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            height: 30px;
+            width: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <h1>Função de calculdora</h1>
+
+    <button onclick="somar()">+</button>
+    <button onclick="subitrair()">-</button>
+    <button onclick="multiplicar()">x</button>
+    <button onclick="dividir()">/</button>
+    <button onclick="limpar()">C</button>
+    <button onclick="novonum()">N</button>
+
+    <div id="output"></div>
+
+
+    <script>
+        var mensagem = '';
+        var output = document.querySelector("#output");
+        var num = parseFloat(prompt("Me informe um numero inicial: "));
+
+        output.innerHTML =num;
+
+
+
+
+        function somar(){
+
+            limpar();
+
+            var num2 = parseFloat(prompt("Me informe mais um numero: "));
+            mensagem += num += num2;
+            output.innerHTML = mensagem;
+            
+        }
+        
+        function subitrair(){
+
+            limpar();
+
+            var num2 = parseFloat(prompt("Me informe mais um numero: "));
+            mensagem += num -= num2;
+            output.innerHTML = mensagem;
+
+        }
+        function multiplicar(){
+
+            limpar();
+
+            var num2 = parseFloat(prompt("Me informe mais um numero: "));
+            mensagem += num *= num2;
+            output.innerHTML = mensagem;
+
+        }
+        function dividir(){
+
+            limpar();
+
+            var num2 = parseFloat(prompt("Me informe mais um numero: "));
+            mensagem += num /= num2;
+            output.innerHTML = mensagem;
+
+        }
+
+
+
+        function novonum(){
+             limpar();
+             var num = parseFloat(prompt("Me informe um numero inicial: "));
+            output.innerHTML = num;
+        }
+
+        function limpar(){
+            mensagem = '';
+            output.innerHTML = mensagem;
+        }
+
+    </script>
+</body>
+</html>
