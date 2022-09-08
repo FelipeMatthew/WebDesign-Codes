@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <h1>Termos e contratos</h1>
+
+    <form>
+
+        <textarea cols="40" rows="10" readonly>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae pariatur eligendi perspiciatis incidunt beatae delectus, aliquam laboriosam hic sunt excepturi nam non reiciendis molestias soluta in. Deserunt, magnam debitis. Ut.
+        </textarea>
+        
+        <label>
+            Li e aceito os termos desse contrato
+            <input type="checkbox" id="checkbox" checked>
+        </label>
+
+        <input id="btn_submit" type="submit" value="Aceitar" >
+    </form>
+
+    <script>
+        
+        (function(){
+            'use strict';
+
+            var $btn_submit = document.getElementById("btn_submit");
+            var $checkbox = document.getElementById("checkbox");
+
+            function btnDisable(){
+                $btn_submit.disabled = !$checkbox.checked;
+            }
+            btnDisable();
+
+            $checkbox.addEventListener("change", function(e){
+                btnDisable();
+            })
+            
+        })()
+
+    </script>
+</body>
+</html>

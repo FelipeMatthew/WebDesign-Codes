@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>Adicionar eventos no botão</h1>
+    <h2>Node list</h2>
+    <button>Botão 1</button>
+    <button>Botão 2</button>
+    <button>Botão 3</button>
+
+
+    <script>
+
+        (function(){
+            'use strict'
+
+            var $btn = document.getElementsByTagName("button");
+
+            for(var i = 0; i < $btn.length; i++){
+                $btn[i].addEventListener("click", clicked);
+            }
+
+            function clicked(){
+                alert(this.textContent + " foi clicado");
+            }
+
+        })()
+
+    </script>
+
+</body>
+</html>

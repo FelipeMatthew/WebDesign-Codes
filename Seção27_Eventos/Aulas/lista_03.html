@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .done{
+            text-decoration: line-through;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Lista de afazeres</h1>
+
+    <input type="text" id="txtTask">
+    <button id="btn">Nova tarefa</button>
+
+    <ul>
+        <li>Estudar JavaScript</li>
+        <li>Lavar louça</li>
+        <li>Jogar um game</li>
+    </ul>
+
+
+    <script>
+
+        (function(){
+            'use strict'
+
+            var $ul = document.querySelector('ul');
+            var $li = $ul.querySelectorAll("li"); //Só vai pegar as li's que estão dentro dessa ul determinada;
+            var $txtTask = document.querySelector("#txtTask");
+            var $btn = document.querySelector("#btn");
+
+
+            $btn.addEventListener("click", addTask);
+            $txtTask.addEventListener("keyup", enterClicked);
+
+            for(var i = 0; i < $li.length ; i++){
+                $li[i].addEventListener("click", toggleDone)
+            }
+
+            function addTask(){
+                var task = '<li>' + $txtTask.value + '</li>';
+                $ul.innerHTML += task;
+                
+                $txtTask.value = '';
+                $txtTask.focus();
+            }
+            function enterClicked(e){
+                if(e.keyCode === 13){
+                    addTask();
+                }
+            }
+            function toggleDone(){
+                this.classList.toggle('done');
+            }
+        })()
+                
+    </script>
+
+</body>
+</html>

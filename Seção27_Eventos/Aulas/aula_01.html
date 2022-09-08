@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btn1" onclick="clicar()">Botão 1</button>
+    <button id="btn2">Botão 2</button>
+    <button id="btn3">Botão 3</button>
+
+    <div class="container">
+        <h1>propagação de eventos</h1>
+
+        <div id="div-1" style="background-color: orange; padding: 25px;">
+            texto retirado dentro da div
+
+            <span style="background-color: blue;">texto dentro da span</span>
+        </div>
+
+
+        <div class="container">
+            <ul>
+                <li>Lista 1</li>
+                <li>Lista 2</li>
+                <li>Lista 3</li>
+            </ul>            
+        </div>
+    </div>
+
+
+
+    <script>
+
+        var btn2 = document.getElementById('btn2');
+
+        btn2.onclick = clicar;
+
+        function clicar(){
+            alert("Voce clicou");
+        }
+
+        btn3.addEventListener("click", function(){
+            alert("Clicou com dom 2");
+        })
+
+        btn3.addEventListener("click", function(){
+            alert("Clicou com dom 2 com evento");
+        })
+
+
+        var $div1 = document.getElementById("div-1");
+        var $div1_span = document.querySelector("span");
+
+        $div1.addEventListener('click', function(){
+            alert("Clique no d1");
+        })
+        $div1_span.addEventListener('click', function(){
+            alert("Clique no span");
+        })
+
+
+
+        var $ul = document.querySelector('ul');
+        var $li = document.querySelectorAll('li');
+        var x= 0;
+
+
+        for( x; $li.length; x++){
+
+            $li[x].addEventListener('click', function(evt){
+            evt.stopPropagation();
+            alert("clicou na LI");
+            }, false);
+
+            
+        }
+
+        
+
+
+    </script>
+
+</body>
+</html>
