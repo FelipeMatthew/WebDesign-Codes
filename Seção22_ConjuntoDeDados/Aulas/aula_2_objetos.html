@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objetos array</h1>
+
+    <div id="output"></div>
+    <script>
+        var output = document.querySelector("#output");
+
+        var nomes = new Array('lapis', 'borracha', 'caneta');
+        var preços = new Array('R$ 5.00', 'R$2.50', 'R$1.99')
+
+        var arroz = new Object();
+
+        arroz.nome = "Arroz";
+        arroz.preco = "R$ " + 20.00;
+        arroz.estoque = 190 +" unidades no estoque";
+        
+        output.innerHTML = arroz.nome + '<br>' + arroz.preco + '<br>' + arroz.estoque;
+    </script>
+
+
+</body>
+</html>

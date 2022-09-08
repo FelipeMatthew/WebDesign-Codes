@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+
+    <div id="output"></div>
+    <script>
+        var output = document.querySelector("#output");
+        
+        var dia =new Array('domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sabado');
+        var hoje= new Date();
+
+        var diaSemana = hoje.getDay();
+
+        
+
+        alert("Bem vindo, hoje é:  " + dia[diaSemana] );
+    </script>
+</body>
+</html>

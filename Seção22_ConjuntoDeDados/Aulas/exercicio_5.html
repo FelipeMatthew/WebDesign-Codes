@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objetos array</h1>
+
+    <div id="output"></div>
+    <script>
+        var output = document.querySelector("#output");
+        var msg = '';
+
+        var cadastro = [
+            {'nome': 'Emanuel', 'email': 'emanuelpirumurxo@gmail.com'},
+            {'nome': 'Felipe', 'email': 'felipenascimento@gmail.com'},
+            {'nome': 'Tati', 'email': 'tatianesantoslima6@gmail.com'},    
+            {'nome': 'Pedro', 'email': 'pedrotoledocareca@gmail.com'},  
+    ];
+
+        for( var i = 0; i < cadastro.length; i++){
+
+            msg += "<h2> Nome: " + cadastro[i].nome + "</h2>";
+            msg += "<h3> Email: " + cadastro[i].email + "</h3>";
+        }
+        output.innerHTML = msg;  
+    </script>
+
+
+</body>
+</html>

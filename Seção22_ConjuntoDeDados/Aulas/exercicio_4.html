@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objetos array</h1>
+
+    <div id="output"></div>
+    <script>
+        var output = document.querySelector("#output");
+        var msg = '';
+
+        var produtos = [
+            {'nome': 'lapis', 'preco': 2.00},
+            {'nome': 'borracha', 'preco': 8.00},
+            {'nome': 'caneta', 'preco': 5.00}
+        ];
+
+        for(var i = 0; i < produtos.length; i++){
+
+            console.log(produtos[i].nome);
+
+            msg += "<h2>Produto: " + produtos[i].nome + "</h2>";
+            msg += "<p>Preço: " + produtos[i].preco + "</p>";
+        }
+
+        output.innerHTML = msg;  
+    </script>
+
+
+</body>
+</html>
