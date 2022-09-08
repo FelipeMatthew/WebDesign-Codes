@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>Média por parametro</h1>
+
+    <div id="output"></div>
+
+
+
+    <script>
+
+        var output = document.querySelector("#output");
+        // Calcular a media por parametro
+        (function(){
+            function msg(){
+                var msg = '';
+            }
+            function media(){
+
+                var total = 0;
+                var qtd = arguments.length;
+
+                for(var x = 0;arguments[x]; x++){
+                    total += arguments[x];
+
+                }
+
+                return total / qtd;
+        }
+            var nota1 = media(3, 5, 0);
+            var nota2 = media(9,9,9,8,8,8,5,5,5,6,6,6,6,5,2,1,4,5,6,6,6);
+            
+            alert('A média 1 é: ' + nota1);
+            alert('A média 2 é: ' + nota2);
+        })();
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculo de IMC</h1>
+
+    <script>
+        (function(){
+
+            var peso = parseFloat(prompt("informe o seu peso:"));
+            var altura = parseFloat(prompt("Agora me informe sua altura: "));
+
+            function calcIMC(peso, altura, callback){
+
+                imc = peso / (altura * altura);
+
+                if(callback && typeof callback === 'function'){
+                    return callback(imc);
+                }
+                else{
+                    return imc;
+                }
+            }
+            
+            function result(imc){
+                if(imc < 16.9){
+                    return "Muito abaixo do peso";
+                    }else if(imc < 18.4){
+                        return "Abaixo do peso";
+                    }else if(imc < 24.9){
+                        return "Peso normal";
+                    }else if(imc < 29.4){
+                        return "Acima do peso";
+                    }else if(imc < 34.9){
+                        return "Obesidade grau 1";
+                    }else if(imc < 40){
+                        return "Obesidade grau 2";
+                    }else{
+                        return "C ta morrendo mlk";
+                    }
+                    
+            }
+            
+            var imc = calcIMC(peso , altura, result);           
+
+            alert(imc);
+        })();
+
+
+
+    </script>
+</body>
+</html>
