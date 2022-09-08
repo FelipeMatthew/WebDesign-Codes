@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <h1>Objetos</h1>
+
+    <script>
+
+            var pessoa1 = {
+                nome: 'Felipe',
+                sobrenome: 'Matthew'
+            }
+
+            var pessoa2 = {
+                nome: 'Elcio',
+                sobrenome: 'Da Cunha'
+            }
+
+            var pessoa3 = {
+                nome: 'Fernanda',
+                sobrenome: 'Chrstina'
+            }
+
+            for (var i = 1; i <= 3; i++){
+                console.log(window['pessoa'+i].nome + ' ' + window['pessoa'+i].sobrenome)
+            }
+
+            function cadastro(nome, sobrenome){
+
+                this.nome = nome;
+                this.sobrenome = sobrenome;
+
+                return console.log(nome + ' ' + sobrenome);
+            
+            }
+
+            cadastro('dadadada', 'dadadada');
+
+ 
+
+
+    </script>
+
+</body>
+</html>
