@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button{
+            padding: 10px;
+            background-color: rgb(88, 190, 156);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            height: 30px;
+            width: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <h1>Função de calculdora</h1>
+
+    <button onclick="iniciar('+')">+</button>
+    <button onclick="iniciar('-')">-</button>
+    <button onclick="iniciar('*')">x</button>
+    <button onclick="iniciar('/')">/</button>
+    
+
+    <div id="output"></div>
+
+
+
+    <script>
+        
+        var n1 = parseFloat(prompt("Informe o primeiro numero"));
+
+        var output = document.querySelector("#output");
+
+        escreva(n1);
+
+        function escreva(mensagem){
+            output.innerHTML = mensagem;
+        }
+
+
+
+        function iniciar(simbolo){
+          
+            try{
+
+                var n1 = parseFloat(output.innerHTML);
+
+                var n2 = parseFloat(prompt("Digite outro numero: "));
+
+                var msg = calcular(simbolo, n1, n2);
+            }
+            catch(e){
+                alert(e);
+                return;
+            }
+
+
+
+            escreva(msg);
+        }
+
+
+        function calcular(simbolo, n1, n2){
+
+            if(simbolo !== '+' && simbolo !== '-' && simbolo !== '*' && simbolo !== '/'){
+                throw new Error("Não aceitamos string seu animal");
+            }
+            if(isNaN(n1)  || isNaN(n2)){
+                throw new Error("Não aceitamos string seu animal");
+            }
+            
+            var numeroCalculado = null;
+
+            switch(simbolo){
+
+                case '+': numeroCalculado =  n1 + n2; break;
+                case '-': numeroCalculado =  n1 - n2; break;
+                case '*': numeroCalculado =  n1 * n2; break;
+                case '/': numeroCalculado =  n1 / n2;      
+            }
+
+            return numeroCalculado;
+        }
+
+
+
+    </script>
+</body>
+</html>
