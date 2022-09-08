@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body>
+    
+    <h1>Nome com input</h1>
+    <input type="text" name="txtnome" id="txtnome" value="Nome">
+    <button onclick="escreve()">Clique aqui</button>
+    <div id="msg"></div>
+
+
+    <script>
+
+        var txtnome;
+        txtnome = document.getElementById('txtnome');
+        
+
+        function escreve(){
+            
+            var nome = txtnome.value;
+            document.querySelector('#msg').innerHTML = "Bem-vindo, <b>"+  nome + "</b>";
+        }
+
+        
+        
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <header>
+        <section class="section1" id="section1">
+            <h1 class="h1" id="h1-1">Aprendendo a usar o dom</h1>
+            <p class="paragrafo">lorem</p>
+            <p class="paragrafo">que isso meu filho calma</p>
+        </section>
+    </header>
+
+    <main>
+        <section>
+            <h2>Seção 02</h2>
+            <p class="paragrafo">mopa</p>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('h1-1').textContent = "Será que deu bom?";
+
+        document.getElementsByTagName("p")[0].textContent = 'teste';
+
+    </script>
+
+</body>
+</html>
