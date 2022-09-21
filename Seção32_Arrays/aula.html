@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>Arrays</h1>
+
+    <script>
+
+        var arr = [1,2,3,4,5];
+        var arr2 = [8,9,10,11];
+
+        var onlyNumber = arr.every( function(el, indice, obj){
+            return typeof el === 'number';
+        });
+        var onlyNumber = arr.some( function(el, indice, obj){
+            return typeof el === 'number';
+        });
+        var onlyNumber = arr.filter( function(el, indice, obj){
+            return typeof el === 'number';
+        });
+        var onlyNumber = arr.forEach( function(el, indice, obj){
+            return typeof el === 'number';
+        });
+        var onlyNumber = arr.indexOf(5);
+            return typeof el === 'number';
+
+        var onlyNumber = arr.lastIndexOf(5, 2);
+            return typeof el === 'number'; 
+        
+        var onlyNumber = arr.map( function(el, indice, obj){
+        return el* indice;
+        });
+
+        var arr3 = arr.concat(arr2, 100, 50);
+
+        arr3.join('\n');
+
+        arr.push('blablabla');
+
+        var removedNumber = arr.pop();
+
+        arr.shift();
+        arr.unshift("mopa");
+
+        arr.reduce(function(antes, atual, indice, arr){
+            return antes + atual - indice;
+        } , 15);
+        
+        arr.reduceRight(function(antes, atual, indice, arr){
+            return antes + atual - indice;
+        } , 15);
+
+        arr.reverse();
+
+        arr.slice(3,7);
+
+        arr.splice(5, 2, 'popo', 'mopo', 'coc');
+
+        arr.toString();
+                
+    </script>
+</body>
+</html>
