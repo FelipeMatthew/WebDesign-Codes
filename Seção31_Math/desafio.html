@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+   
+
+<body>
+    <h1>Mudar imagem ao recarregar a pagina</h1>
+
+    
+    <script>
+        
+        (function(){
+            window.addEventListener("load", init);
+
+            function init(){
+                var n = sortear(5) + 1;
+
+                document.querySelector("body").style.background = "url(./images/"+n+".jpg)";
+            }
+            function sortear(n){
+                var _n = n || 1;
+                var resultadoSorteado = Math.random();
+                resultadoSorteado = resultadoSorteado * _n; //Determina quantos numeros vão sortear ali no n, n= numero max q vai sortear;
+                
+                resultadoSorteado = Math.floor(resultadoSorteado);
+
+
+                return resultadoSorteado;
+            }
+        })()
+
+
+    </script>
+</body>
+</html>
