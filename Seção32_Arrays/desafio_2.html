@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .destaque{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio 2</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, labore magni corrupti est cumque quis, harum animi adipisci tempore voluptates quisquam sed consectetur, a quas vitae maxime delectus cum officiis.</p>
+    <p>Lorem ipsum, dolor sit amet javascript adipisicing elit. Quaerat iusto doloremque tempora aspernatur esse maiores mollitia voluptatibus odio sit ipsum hic, rem tempore facere vero quibusdam eligendi facilis veritatis ducimus.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem beatae ipsum nihil tempora odio, totam, sit eius accusantium, maxime autem eum? Maiores beatae consequatur sed impedit recusandae iure! Aut, odio?</p>
+    <p>Lorem ipsum dolor sit amet javascript adipisicing elit. Explicabo molestiae optio rerum sed ea saepe totam eum omnis praesentium enim, ex tenetur dignissimos aperiam deserunt animi unde voluptate fuga quae?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde reiciendis laudantium animi! Dolor corporis atque repellat cupiditate facilis incidunt accusamus. Fuga optio dignissimos culpa iure laudantium cupiditate tenetur magni pariatur.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus animi doloribus dolorem aspernatur modi! Aut vitae voluptates, ab laborum repellat dolor at! Eos, velit quo nostrum voluptates beatae voluptas fugiat?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat iusto doloremque javascript aspernatur esse maiores mollitia voluptatibus odio sit ipsum hic, rem tempore facere vero quibusdam eligendi facilis veritatis ducimus.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem beatae ipsum nihil tempora odio, totam, sit eius accusantium, maxime autem eum? Maiores beatae consequatur sed impedit recusandae iure! Aut, odio?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo molestiae optio rerum sed ea saepe totam eum omnis praesentium enim, ex tenetur dignissimos aperiam deserunt animi unde voluptate fuga quae?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde reiciendis laudantium javascript animi! Dolor corporis atque repellat cupiditate facilis incidunt accusamus. Fuga optio dignissimos culpa iure laudantium cupiditate tenetur magni pariatur.</p>
+
+
+    <script>
+            (function(){
+            'use strict';
+
+            var paragrafos = document.querySelectorAll("p");
+            var x = 0;
+
+            for(x; paragrafos.length; x++){
+                var temJS = paragrafos[x].textContent.toLocaleLowerCase().indexOf('javascript') >= 0;
+                paragrafos[x].className += temJS ? 'destaque' : '';
+            }
+            
+        })()
+
+    </script>
+</body>
+</html>
