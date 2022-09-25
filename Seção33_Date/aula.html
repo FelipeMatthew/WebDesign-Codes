@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Date</h1>
+
+    <script>
+        (function(){
+            'use strict';
+            var ActualDate = new Date();
+            ActualDate.setHours(0);
+            ActualDate.setMinutes(0);
+            ActualDate.setSeconds(0);
+            ActualDate.setMilliseconds(0);
+
+            var ActualYear = new Date().getFullYear();
+
+            var BirthDate = new Date(ActualDate, 1, 11);
+
+            var ActualDateTS = ActualDate.getTime();
+            var BirthDateTS = BirthDate.getTime();
+
+            if(ActualDateTS = BirthDateTS){
+                alert("Congratulations it's your birthday");
+                return;
+            }
+            if(ActualDateTS < BirthDateTS){
+                BirthDate.setFullYear(++ActualYear);
+                BirthDateTS = BirthDate.getTime();
+            }
+
+            const UM_DIA_TS = 24 * 60 * 60 * 1000;
+            
+            var DateDifference = BirthDate - ActualDate;
+
+            console.log(DateDifference / UM_DIA_TS);
+        })()
+      
+
+    </script>
+</body>
+</html>
