@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>Desafio do relógio</h1>
+
+    <h2 id="output"></h2>
+
+    <script>
+        (function(){
+            'use strict';
+
+            var $output = document.getElementById("output");
+                
+            function relogioAtualizado(){
+
+                setTimeout(relogioAtualizado, 1000);
+
+            }
+            function formataHora(){
+
+                var data = new Date();
+
+                var hours = formata(data.getHours());
+                var minutes = formata(data.getMinutes());
+                var second = formata(data.getSeconds());
+
+                return hours +':'+minutes+':'+second;
+            }
+            formataHora();
+
+            function formata(t){
+                return t < 10 ? '0'+t : t;
+            }
+            function mostraRelogio(atual){
+                $output.textContent = atual;
+            }
+            
+            
+            setInterval(function(){
+                mostraRelogio(formataHora());
+            }, 1000);
+        })();
+
+
+
+    </script>
+</body>
+</html>
