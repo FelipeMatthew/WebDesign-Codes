@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <h1>Time</h1>
+
+    <script>
+        (function(){
+            'use strict';
+            var dataBr = new Date();
+
+            function formatarData(data){
+                var dia = dataBr.getDate() < 10 ? '0' + dataBr.getDate() : dataBr.getDate();
+                var mes = (dataBr.getMonth() + 1) < 10 ? '0'+ data.getMonth() : dataBr.getMonth();
+
+                return alert('Hoje é: ' + dia +' / '+ mes + ' / ' + dataBr.getFullYear());
+            }
+            formatarData();
+
+        })()
+
+    </script>
+</body>
+</html>
