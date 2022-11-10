@@ -1,0 +1,428 @@
+body{
+    margin: 0;
+    font-family: 'Open Sans', 'sans-serif';
+    line-height: 1.6;
+} 
+img{
+    max-width: 100%;
+}
+/*CLASSE GENÉRICA*/
+.container{ /*Usado para alinhar todos os elementos */
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    max-width: 980px;
+}
+.button{
+    text-transform: uppercase;
+    padding: 15px 40px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    margin-right: 15px;
+    display: inline-block;
+    letter-spacing: 2px;
+}
+.button:hover{
+    background-color:white;
+    color: #63c6ae;
+    border: 1px solid #63c6ae;
+    transition:.5s ease-in-out;
+}
+/* JavaScript */
+.js .header{
+    position: fixed;
+    width: 100%;
+}
+.js .laptop-slider{
+    overflow: hidden;
+}
+/* Parte do carousel */
+.js .laptop-slider .slide-show{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    max-width: 950px;
+}
+.js .laptop-slider{
+    overflow: hidden;
+    color: white;
+}
+.js .laptop-slider figure{
+    opacity: 0;
+    transition: 1s opacity;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.js .laptop-slider .slide-show figure.show{
+    opacity: 1;
+    position: static;
+
+}
+.js .laptop-slider .prev, .js .laptop-slider .next{
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    cursor: pointer;  
+}
+.js .laptop-slider .prev:hover, .js .laptop-slider .next:hover{
+    color: #69c6ae;
+    transition: .8s ease-in-out;
+}
+.js .laptop-slider .prev{
+    left: 10px;
+}
+.js .laptop-slider .next{
+    right: 10px;
+}
+/* Quote Carousel */
+.js .quote_slideshow{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    max-width: 950px;
+}
+.js .quote_container{
+    overflow: hidden;
+    color: white;
+}
+.js .quote_slideshow figure{
+    opacity: 0;
+    transition: 1s opacity;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.js .quote_slideshow figure.show{
+    opacity: 1;
+    position: static;
+}
+.js .quote_container .prev, .js .quote_container .next{
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    cursor: pointer;  
+}
+.js .quote_container .prev:hover, .js .quote_container .next:hover{
+    color: #57d1da;
+    transition: .8s ease-in-out;
+}
+.js .quote_container .prev{
+    left: -50px;
+    top: 20px;
+}
+.js .quote_container .next{
+    right: -50px;
+    top: 20px;
+}
+.js .quote_slideshow span{
+    font-size: 30px;
+}
+
+
+/* Começando a estilização: Header */
+.header{
+    background-color: #fff;
+    width: 100%;
+    z-index: 10;
+}
+.logo-text{
+    text-transform: uppercase;
+    background-color: #63c6ae;
+    font-size: 24px;
+    margin: 0;
+    padding: 20px;
+    display: block;
+    float: left; /* Vai deixar o logo gudado no topo do site e a ul vai tentar se encaixar do lado */
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+}
+.header__nav{
+    clear: left;
+ 
+}
+.header__nav ul{
+    margin: 0;
+    padding: 0;
+}
+.header__nav li{
+    list-style-type: none;
+    background-color: #242a2c;
+    border-bottom: 1px dotted rgba(255,255,255,.2);
+    text-align: center;   
+}
+.header__nav a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #586165;
+    font-size: 14px;
+    font-weight: 600;
+    display: block; /* É usado aqui para que o link seja em toda a barra, nao somente encima da palavra */
+    padding: 25px 0;
+    
+}
+.header__nav a:hover{
+    color: #63c6ae;
+    transition: .5s;
+}
+.js .header__nav{
+    transition: max-height 1s;
+}
+.header__btnMenu{
+    float: right;
+    margin: 1.5em;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+}
+
+/* Hero Section, parte onde sera localizada a área de inicio do site*/
+.hero{
+    height: 80vh;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /*usado para fazer aquela setinha embaixo da imagem*/
+    background: 
+    linear-gradient(45deg,white 50%, transparent 50%) left calc(50% + 20px) bottom no-repeat  ,
+    linear-gradient(-45deg,white 50%, transparent 50%) left calc(50% - 20px) bottom no-repeat ,
+    url(../img/01.jpg) center;
+    /*Foi usado em uma unica linha para que seja mais facil de manusear*/
+    background-size: 40px 40px , 40px 40px, cover;
+}
+.hero__title{
+    background-color: #63c6ae;
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 30px 20px;
+    text-transform: uppercase;
+}
+.hero__txt{
+    background-color: #242a2c;
+    margin: 5px 30px 35px;
+    color: white;
+    padding: 20px;
+    font-size: 16px;
+}
+.hero__btn{
+    border: 1px solid rgba(255,255,255,.3);
+    background-color:rgba(0,0,0,.2);
+    border-radius: 5px;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+/*Parte dos cards*/
+.people_cards{
+    margin-top: 2.5em;
+}
+.people_cards__card:hover{
+    outline: 5px solid #63c6ae;
+    outline-offset: -5px;    
+}
+.people_cards__card:hover .people_cards__avatar img{
+    transform: translateY(-50%);
+}
+.people_cards__card:hover .people_cards__title,
+.people_cards__card:hover .people_cards__text{
+    color: #63c6ae;
+}
+.people_cards__img{
+    width: 100%;
+}
+.people_cards__avatar{
+    margin: -55px auto;
+    width: 88px;
+    height: 88px;
+    overflow: hidden;
+}
+.people_cards__content{
+    text-align: center;
+    padding: 40px 25px 10px;
+    border: 1px solid #dbe1e7;
+}
+.people_cards__title{
+    color: #737c85;
+    font-size: 21px;
+    font-weight: normal;
+}
+.people_cards__text{
+    color: #929da5;
+    font-size: 14px;
+}
+/* Parte dos conteudos e textos */
+.content{
+    background-color: #f8f9f9;
+    padding: 20px 0 80px;
+    border-top: 1px solid #e3e3e3;
+}
+.content h3{
+    color: #737c85;
+    font-size: 21px;
+    padding-top: 40px;
+    font-weight: 600;
+}
+.content p{
+    color: #929da5;
+    font-size: 14px;
+    word-spacing: 3px;
+}
+.button_primary{
+    background-color: #69c6ae;
+    color: white;   
+}
+.button_secundary{
+    background-color: #455357;
+    color: white;   
+}
+/* Parte das imagens ao qual é 'Lastest articles', contendo imagens com hover ativado */
+
+.last_articles__title{
+    background-color: #63c6ae;
+    padding: 5px 0;
+}
+.last_articles__title h2{
+    font-size: 24px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.last_articles_thumbs{ /* Será utilizado grids */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 0;
+}
+.last_articles_thumbs img{
+    display: block;
+    width: 100%;
+}
+
+/* Parte da imagem do laptop com slider, botão de clicar etc */
+.laptop-slider{
+    background-color: #242a2c;
+    padding: 125px 0 100px;
+    width: 100%;
+    overflow: auto;
+}
+.slide-show{
+    white-space: nowrap;
+}
+.slide-show figure{
+    display: inline-block;
+}
+/* Parte do quote container, é a parte das frases que vai ter um carosel */
+.quote_container{
+    background-color: #63c6ae;
+    padding: 50px 0;
+    border-bottom: 12px solid #58b9a1;
+
+}
+.quote_slideshow h2{
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 300;
+}
+.quote_slideshow figcaption{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+.no-js .quote_slideshow figure + figure{
+    margin-top: 5em;
+}
+/* FOOTER */
+.footer{
+    background-color: #242a2c;
+    padding: 50px 0px 250px;
+    color: #454e51;
+    font-size: 15px;
+}
+.footer__links li{
+    list-style: none;
+}
+.footer__links a{
+    color: #454e51;
+    display: block;
+    font-weight: 300;
+    text-decoration: none;
+}
+.footer h2{
+    text-transform: uppercase;
+} 
+
+/* Inincio das media query (Responsividade) */
+@media screen and (min-width: 1025px){
+
+    /* Header - menu */
+    .header{
+        position: fixed;
+    }
+    .logo-text{
+        width: 25%; /* Terá 25% do tamanho do elemento pai */
+        text-align: right;
+        box-sizing: border-box;
+    }
+    .header__btnMenu{
+        display: none;
+    }
+    .header__nav{
+        float: left;
+        width: 75%;
+        clear: none;
+        max-width: 800px;
+    }
+    .header__nav ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    .header__nav li{
+        border: none;
+        flex-grow: 1; /* Vai designar os espaços faltantes para todas as li's, deixando elas sem espaços vazios */
+    }
+    .header__nav a{
+        background-color: white;
+    }
+    /* Parte dos cards */
+    .people_cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+    }
+    /* Parte dos conteudos e textos */
+    .content .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+    /* Parte das imagens todas juntas - last article */
+    .last_articles_thumbs{
+        grid-template-columns: (6 , 1fr);
+        grid-template-rows: (2, 1fr);
+    }
+    /* FOOTER */
+    .footer .container{
+        display: flex;
+    }
+    .footer .container > * {
+        margin: 1.7em;
+    }
+}
